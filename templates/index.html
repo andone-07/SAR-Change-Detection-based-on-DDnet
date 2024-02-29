@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>GROUP 19 SAR</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="static/assets/css/main.css" />
+		<link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+	</head>
+	<body class="is-preload">
+		
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1 id="title">SE GROUP 19</h1>
+							<p>朱甲文 赵志豪 李浩 <br/>钟杰聪 石昱杲 赵吉林</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#top" id="top-link"><span class="icon solid fa-user">简介</span></a></li>
+								<li><a href="#about" id="about-link"><span class="icon solid fa-home">项目介绍</span></a></li>
+								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">上传检测</span></a></li>
+								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">更好的建议</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							<header>
+								<h2 class="alt">Hi! We are <strong>SE-GROUP 19</strong>!<br/>
+								Our Project: <strong>SAR Picture Change Dectection</strong></h2>
+							</header>
+
+							<footer>
+								<a href="#portfolio" class="button scrolly">点此进行检测</a>
+							</footer>
+
+						</div>
+					</section>
+
+				<!-- About Me -->
+					<section id="about" class="three">
+						<div class="container">
+
+							<header>
+								<h2>项目介绍</h2>
+							</header>
+							<div class = "ptext">
+								<p style="text-indent: 50px;">SAR图像变化检测是对同一地区不同时相的两幅或多幅图像进行分析，检测出其中的变化部分与未变化部分，检测局部纹理和辐射值的变化是图像变化检测的主要任务。图像的变化是由图像场景的真实变化，或由传感器精度、照射角、地面湿度等变化而引起的。在实际应用中，SAR图像变化检测技术在各方面都发挥重要作用。如在民用领域，主要是对资源和环境监测中各种变化信息的获取，例如对农业中的作物生长进行监测；土地覆盖率变化、水域变化、森林和植被变化、城市变迁、地形改变等；测绘中的地理空间数据更新；以及自然灾害中对火灾、泥石流、水灾等造成的损失的评测。</p>
+							</div>
+							<a href="#" class="image featured"><img src="static/images/pic09.png" alt="" /></a>
+						</div>
+					</section>
+
+				<!-- Portfolio -->
+					<section id="portfolio" class="two">
+						<!-- <div class="container"> -->
+							<header>
+								<h2>在线检测</h2>
+								<h3>拖拽，点击或者粘贴上传两张图片</h3>
+							</header>
+							<!--
+							<form action="" enctype='multipart/form-data' method='POST'>
+								<input type="file" name="file" style="margin-top:20px;"/>
+								<br>
+								<input type="submit" value="上传" class="button-new" style="margin-top:15px;"/>
+							</form>  -->
+
+							<!-- </div> -->
+							<div id="myDropzone" class="dropzone"></div>
+								<script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+								<script>
+								// Dropzone 选项配置
+									Dropzone.options.myDropzone = {
+									init: function () {
+										// redirect after queue complete
+										// upload queue when button click
+										// custom init code
+									},
+									// click upload options
+									uploadMultiple: false,
+									parallelUploads: 2,
+									paramName: "file", // The name that will be used to transfer the file
+									maxFilesize: 3, // MB
+									acceptedFiles: "image/*",
+									maxFiles: 30,
+									dictDefaultMessage: `拖拽，点击或者粘贴上传图片`, // message display on drop area
+
+									};
+									//初始化Dropzone，绑定id为myDropzone的div， 服务端为/
+									var myDropzone = new Dropzone("div#myDropzone", { url: "/"});
+								</script>
+								<br>
+								<p><a href="{{ url_for('result') }}" class="button scrolly">点击进行检测</a></p>	
+					</section>
+
+				
+
+				<!-- Contact -->
+					<section id="contact" class="four">
+						<div class="container">
+
+							<header>
+								<h2>提建议</h2>
+							</header>
+
+							<form method="#" action="#">
+
+								<div class="row">
+
+									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
+									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
+									<div class="col-12">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+									<div class="col-12">
+										<button onclick="location.href = 'index.html'">提交</button>
+									</div>
+									
+								</div>
+							</form>
+
+						</div>
+					</section>
+
+			</div>
+
+				
+			
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy;</li><li>Made By: <a href="http://html5up.net">SE GROUP19 Jiawen Zhu</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="static/assets/js/browser.min.js"></script>
+			<script src="static/assets/js/breakpoints.min.js"></script>
+			<script src="static/assets/js/util.js"></script>
+			<script src="static/assets/js/main.js"></script>
+
+	</body>
+	<script>
+		//给Dropzone增加黏贴事件监控
+		  const target = document.querySelector('#myDropzone');
+		  // Handle the `paste` event
+		  target.addEventListener('paste', function (evt) {
+			// Get the data of clipboard
+			const data = evt.clipboardData.items;
+			const items = [].slice.call(data).filter(function (item) {
+			  // Filter the image items only
+			  return item.type.indexOf('image') !== -1;
+			});
+			if (items.length === 0) {
+			  return;
+			}
+			const item = items[0];
+			const file = item.getAsFile();
+			myDropzone.addFile(item.getAsFile())
+		  });
+		</script>
+</html>
