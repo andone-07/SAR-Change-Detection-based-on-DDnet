@@ -1,8 +1,3 @@
-# @ Author: Feng Gao, Ocean University of China
-# @ Date: 2020-02-22
-# @ Email: gaofeng@ouc.edu.cn
-# @ Homepage: http://feng-gao.cn
-
 import numpy as np
 from scipy import signal
 from scipy.linalg import norm
